@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8">
+        <form action="" method="GET">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input class="form-control" placeholder="name" name="name" value="">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+<div class="col-lg-4">
+   <canvas  class="myChart" data-pos={{positive}} data-neg={{negative}} data-neut={{neutral}}  width="100" height="100"></canvas>
+
+{{prod_typ}}               </div>
+
+  </div>
+
+  <!-- <h2>Vertical (basic) form</h2>
+                <canvas  class="myChart" data-pos={{positive}} data-neg={{negative}} data-neut={{neutral}}  width="100" height="100"></canvas>
+                
+
+
+  <form action="" method="GET">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input class="form-control" placeholder="name" name="name" value="">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+ -->
+        <script>
+         $(window).bind("load", function() {
+           let i = 0;
+          for(i = 0 ; i<5; i++) {
+              var ctxList = $(".myChart")[i].getContext('2d');
+              var pos = $(".myChart")[i].dataset.pos;
+              var neg = $(".myChart")[i].dataset.neg;
+              var neut = $(".myChart")[i].dataset.neut;
+              var myChart = new Chart(ctxList, {
+              type: 'pie',
+              data: {
+                  labels: ["Positive", "Negative", "Neutral"],
+                  datasets: [{
+                      data: [parseInt(pos, 10), parseInt(neg, 10), parseInt(neut, 10)],
+                      backgroundColor: [
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                          'rgba(255, 206, 86, 0.2)',
+                      ],
+                      borderColor: [
+                          'rgba(255,99,132,1)',
+                          'rgba(54, 162, 235, 1)',
+                          'rgba(255, 206, 86, 1)',
+                          'rgba(75, 192, 192, 1)',
+                          'rgba(153, 102, 255, 1)',
+                          'rgba(255, 159, 64, 1)'
+                      ],
+                      borderWidth: 1
+                             }]
+                    },
+            options: {
+                   scales: {
+                       yAxes: [{
+                            ticks: {
+                                      beginAtZero:true
+                                   }
+                              }]
+                            }
+                       }
+            });
+            }
+})
+
+</script>
+
+
+
+</body>
+</html>
