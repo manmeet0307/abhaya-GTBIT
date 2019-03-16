@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
@@ -17,7 +17,7 @@
     <div class="col-lg-8">
         <form action="" method="GET">
     <div class="form-group">
-      <label for="email">Email:</label>
+      <label for="email">Search Your Product:</label>
       <input class="form-control" placeholder="name" name="name" value="">
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
@@ -30,20 +30,7 @@
 
   </div>
 
-  <!-- <h2>Vertical (basic) form</h2>
-                <canvas  class="myChart" data-pos={{positive}} data-neg={{negative}} data-neut={{neutral}}  width="100" height="100"></canvas>
-                
-
-
-  <form action="" method="GET">
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input class="form-control" placeholder="name" name="name" value="">
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-  </form>
-</div>
- -->
+  
         <script>
          $(window).bind("load", function() {
            let i = 0;
@@ -93,3 +80,287 @@
 
 </body>
 </html>
+ -->
+
+ {% load static %}
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Luto Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+  <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content=""/>
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content=""/>
+  <meta property="og:site_name" content=""/>
+  <meta property="og:description" content=""/>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+  <!-- Flexslider  -->
+  <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+  <!-- Flaticons  -->
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+  <!-- Modernizr JS -->
+  <script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+  <!-- FOR IE9 below -->
+  <!--[if lt IE 9]>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+<style type="text/css">
+  .myChart{
+    background-color: black;
+
+  }
+</style>
+  </head>
+  <body>
+
+  <nav id="colorlib-main-nav" role="navigation">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+    <div class="js-fullheight colorlib-table">
+      <div class="colorlib-table-cell js-fullheight">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+              <input type="text" class="form-control" id="search" placeholder="Enter any key to search...">
+              <button type="submit" class="btn btn-primary"><i class="icon-search3"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <ul>
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="/ToBeMom">To Be Mom</a></li>
+              <li><a href="specialties.html">specialties</a></li>
+              <li><a href="reservation.html">Reservation</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="colorlib-page">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="colorlib-navbar-brand">
+              <br>
+              <a class="colorlib-logo" href="index.html"><i class="flaticon-female"></i><span>Abhaya</span></a>
+            </div>
+            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <aside id="colorlib-hero">
+      <div class="flexslider">
+        <ul class="slides">
+          <li style="background-image: url({% static 'images/bi.png' %});">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+              <div class="row">
+               <!--  <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+                  <div class="slider-text-inner text-center">
+                    <div class="desc">
+                      <span class="icon"> <i class="flaticon-cutlery"></i></span>
+                      <h1>Abhaya-Be Fearless</h1>
+                      <p>Whether you are an expecting mother or a confused girl who has just gone in the phase of puberty- this is the one stop destination website for you</p>
+                      <p><a href="#" class="btn btn-primary btn-lg btn-learn">To Be MOM</a></p>
+                      <p><a href="#" class="btn btn-primary btn-lg btn-learn">Menstrual Hygeine</a></p>
+                      <div class="desc2"></div>
+                    </div>
+                  </div>
+                </div> -->
+                <div class="col-md-6 col-sm-12 col-xs-12 col-md-offset-3 slider-text">
+                  <div class="slider-text-inner text-center">
+                    
+                <div class="col-lg-6">
+        <form action="" method="GET">
+    <div class="form-group">
+      <label for="email" style="color: white;font-weight: bolder;font-size: 20px;">Search Your Product:</label>
+      <input class="form-control" placeholder="Enter Here" name="name" value="">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  <br>
+  <h1 style="color: white;font-size: 20px;">Your Product type is: <b><i>{{prod_typ}}</i></b></h1>
+  
+</div>
+<div class="col-lg-6">
+   <canvas  class="myChart" data-pos={{positive}} data-neg={{negative}} data-neut={{neutral}}  width="100" height="100"></canvas>
+
+              
+</div>
+
+  
+              </div>
+            </div>
+            <div class="desc2"></div>
+           
+                
+          </li>
+          
+        
+          </ul>
+          <div class="mouse">
+           <a href="#" class="mouse-icon">
+            <div class="mouse-wheel"></div>
+           </a>
+        </div>
+        </div>
+    </aside>
+
+    <div class="colorlib-intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="intro animate-box">
+              <span class="icon">
+                <i class="icon-map4"></i>
+              </span>
+              <h2>Government Schemes and Helplines</h2>
+              <p>Get the correct Help Immediately</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="intro animate-box">
+              <span class="icon">
+                <i class="icon-calculator"></i>
+              </span>
+              <h2>Calculate BMI</h2>
+              <p>Know your Body Mass Index</p>
+              <p>Both Metric and Imperial Formats available</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="intro animate-box">
+              <span class="icon">
+                <i class="icon-mobile2"></i>
+              </span>
+              <a href="#"><h2>SOS</h2></a>
+              <p>Make a call to nearby police station with just a click</p>
+              
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="intro animate-box">
+              <span class="icon">
+                <i class="icon-home"></i>
+              </span>
+              <h2>Your Nearby Hospitals</h2>
+              <p>Get location of your nearesy hospitals with associated google map</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  <!-- jQuery -->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <!-- jQuery Easing -->
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <!-- Bootstrap -->
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- Waypoints -->
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <!-- Parallax -->
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <!-- Owl Carousel -->
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <!-- Magnific Popup -->
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/magnific-popup-options.js' %}"></script>
+  <!-- Flexslider -->
+  <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+  <!-- Date Picker -->
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+
+  <!-- Main JS (Do not remove) -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <script>
+         $(window).bind("load", function() {
+           let i = 0;
+          for(i = 0 ; i<5; i++) {
+              var ctxList = $(".myChart")[i].getContext('2d');
+              var pos = $(".myChart")[i].dataset.pos;
+              var neg = $(".myChart")[i].dataset.neg;
+              var neut = $(".myChart")[i].dataset.neut;
+              var myChart = new Chart(ctxList, {
+              type: 'pie',
+              data: {
+                  labels: ["Positive", "Negative", "Neutral"],
+                  datasets: [{
+                      data: [parseInt(pos, 10), parseInt(neg, 10), parseInt(neut, 10)],
+                      backgroundColor: [
+                          '#B0B0B0',
+                          '#FF3333',
+                          '#66FF66',
+                      ],
+                      borderColor: [
+                          'white',
+                          
+                      ],
+                      borderWidth: 2
+                             }]
+                    },
+            options: {
+                   scales: {
+                       yAxes: [{
+                            ticks: {
+                                      beginAtZero:true
+                                   }
+                              }]
+                            }
+                       }
+            });
+            }
+})
+
+</script>
+
+
+  </body>
+</html>
+

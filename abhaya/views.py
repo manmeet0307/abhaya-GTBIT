@@ -103,7 +103,24 @@ def home(request):
 def ToBeMom(request):
 	return render(request,"abhaya/ToBeMom.html")
 
+def GovtSchemes(request):
+	return render(request,"abhaya/GovtSchemes.html")
 
+def Diet(request):
+	return render(request,"abhaya/diet.html")
+
+def Excercise(request):
+	return HttpResponse("Excercise")
+
+def NearByHospitals(request):
+	return render(request,"abhaya/map.html")
+
+def videos(request):
+	return render(request,"abhaya/videos.html")
+
+
+def voice(request):
+	return render(request,"abhaya/voice.html")
 def analyse(request):
 	ans=""
 	typ="AVG"
